@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <title>Corona Map</title>
+    
+  </head>
+
+<body>
+  
+ 
+
+    <button onclick="getLocation()">Allow your location</button>
+    <div id='map'></div>
+
+    
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+
+<script>
+  
+  mapboxgl.accessToken = 'pk.eyJ1IjoibXltYXBib3gyMDAwIiwiYSI6ImNrY3hsNTYxYzAxMmUycm1tcWowbWoxYWUifQ.Rw6MsliF8L3tg53i2XvyFQ';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom : 4,
+    center:[85,25],
+  });
+</script>
+<script src="index.js"></script>
+
+<script>
+    var x = document.getElementById("demo");
+    var lat1,lon1;
+    function getLocation() {
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(storePosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function storePosition(position) {
+    //   x.innerHTML = "Latitude: " + position.coords.latitude + 
+    //   "<br>Longitude: " + position.coords.longitude;
+      lat1=position.coords.latitude;
+      lon1=position.coords.longitude;
+    
+
+    }
+    
+
+   
+
+
+    </script>
+
+</html>
+
+
+

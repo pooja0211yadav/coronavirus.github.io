@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Corona Tracker</title>
+    </head>
+    
+    <style>
+        .cases{
+            
+            background-color: #EFF0E3;
+        }
+        
+        .header-bottom{
+            background-color: #FDE468;
+        }
+.dropdown {
+  position: relative;
+  display: inline-block;
+    padding: 10px;
+    border: solid black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FF4500 ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+    
+    <body>
+        <header>
+
+            <div class="col-xs-12">
+			<a class="logo" style="text-decoration: none" href="#" aria-label="Go to home" rel="home">
+				<img src="images/1200px-Emblem_of_India.svg.png" alt="State Emblem of India" width="100px" height="170px">
+				
+                <img src="images/corona_tracker.png" alt="Corona Tracker" width="1290px" height="170px">
+                
+                <img src="images/1200px-Emblem_of_India.svg.png" alt="State Emblem of India" width="100px" height="170px">
+			</a>
+			</div>
+        
+            <center>
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <div class="site-meta">
+                                <p><b>Helpline Number : </b> +91-11-23978046 &emsp;<b>  Toll Free :</b> 1075 &emsp;  <strong>Helpline Email ID :</strong> <a href="mailto:ncov2019@gov.in">ncov2019@gov.in </a></p>
+                                
+                            </div>
+                            <div class="site-meta">
+                                <strong> <a href="https://www.mohfw.gov.in/pdf/StatewiseCovidHospitalslink19062020.pdf" target="_blank" title="View pdf">Covid-19 facilities in States &amp; Union Territories</a></strong>
+                            </div>
+                            <br>
+                            <div class="site-meta">
+                                <h2>Download Arogya Setu 
+                                    <img src="images/Aarogya-Setujpg.jpg" width="23px" height="20px"> App </h2> 
+                                    <a href="http://bit.ly/AarogyaSetu_PS" style="text-decoration: none" target="_BLANK" title="For Android">
+                                     <img src="images/android_logo_PNG32.png" width="50px" height="50px"></a>
+                                    <a href="https://apple.co/2X1KMzO" target="_BLANK" style="text-decoration: none" title="For iPhone"> &emsp;
+                                    <img src="images/apple_logo.jpg" width="50px" height="50px"></a>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <br>
+            </center>
+        </header>
+    <div class="cases">    
+        <center>
+            <div class="dropdown">
+  <img src="confirmed_cases.jpg" alt="Confirmed Cases" width="300" height="150">
+  <div class="dropdown-content">
+  <h1>9717966</h1>
+  <div class="desc">Total confirmed Cases in India</div>
+  </div>
+</div>
+        
+        <div class="dropdown">
+  <img src="coronavirus.jpg" alt="Active Cases" width="300" height="150">
+  <div class="dropdown-content">
+  <h1>380876</h1>
+  <div class="desc">Active Cases in India</div>
+  </div>
+</div>
+        
+        <div class="dropdown">
+  <img src="discharged.jpg" alt="Cured or Discharged" width="300" height="150">
+  <div class="dropdown-content">
+<h1>9193535</h1>
+      <div class="desc">Cured Cases in India</div>
+  </div>
+</div>
+        
+        <div class="dropdown">
+  <img src="death_cases.jpg" alt="Death " width="300" height="150">
+  <div class="dropdown-content">
+<h1>141141</h1>
+      <div class="desc">Deceased Cases in India</div>
+  </div>
+</div>
+        </center>
+        
+        <p id="demo" style="float:right"></p>
+        <script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>s
+        
+        </div>
+        
+        <marquee behavior="scroll" direction="left" style="background-color: orangered;"><h2>Total number of tests done during the previous day 10,26,399</h2></marquee>
+<br><br>
+       <center><iframe src="FAQ.pdf" name="iframe_a" height="500px" width="1000px" float="center" title="Iframe Example"></iframe></center>
+
+        <button onclick="document.location='FAQ.pdf'">  FAQ  </button>
+
+        <button onclick="document.location='prevention.pdf'">Prevention</button>
+        <button onclick="document.location='index.html'">Hospitals</button>
+        
+        	
+      <footer style="background-color: orangered;width: 100%;height:60px ;position: center; font-weight: 600;"><center><br> © Copyright 2020, All Rights Reserved</center>
+     </footer>
+    </body>
+</html>

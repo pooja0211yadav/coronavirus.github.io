@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <title>Corona Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+      body { margin: 0; padding: 0; }
+      #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+  </head>
+
+<body>
+    <button onclick="getLocation()">Allow your location</button>
+    <style>
+      .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+      </style>
+    <div id='map'></div> 
+
+    
+
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+
+<script>
+  
+  mapboxgl.accessToken = 'pk.eyJ1IjoibXltYXBib3gyMDAwIiwiYSI6ImNrY3hsNTYxYzAxMmUycm1tcWowbWoxYWUifQ.Rw6MsliF8L3tg53i2XvyFQ';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom : 4,
+    center:[85,25],
+  });
+
+  map.on('load', function() {
+      map.loadImage(
+      'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+      // Add an image to use as a custom marker
+      function(error, image) {
+      if (error) throw error;
+      map.addImage('custom-marker', image);
+       
+      map.addSource('places', {
+      'type': 'geojson',
+      'data': {
+      'type': 'FeatureCollection',
+      'features': [
+      {
+      'type': 'Feature',
+      'properties': {
+      'description':
+      '<strong>Make it Mount Pleasant</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+      },
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [lon1,lat1]
+      }
+      }
+
+</script>
+<script src="index.js"></script>
+
+<script>
+    var x = document.getElementById("demo");
+    var lat1,lon1;
+    function getLocation() {
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(storePosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function storePosition(position) {
+    //   x.innerHTML = "Latitude: " + position.coords.latitude + 
+    //   "<br>Longitude: " + position.coords.longitude;
+      lat1=position.coords.latitude;
+      lon1=position.coords.longitude;
+    
+
+    }
+    
+    </script>
+
+</html>
+
+
+
